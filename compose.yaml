@@ -33,7 +33,7 @@ services:
     # - 08-2의 MariaDB(3306)와 동시에 실행할 수 있도록 내 PC 쪽은 3307 사용
     # - 앱 컨테이너는 이 설정과 상관없이 mariadb:3306으로 접속
     ports:
-      - "127.0.0.1:3307:3306"
+      - "127.0.0.1:3306:3306"
 
     volumes:
       # 이름 있는 볼륨 (아래 volumes: 에서 선언), 컨테이너를 지워도 데이터 유지
@@ -61,7 +61,7 @@ services:
     # 이 폴더의 Dockerfile로 이미지를 빌드 (= docker build .)
     build: .
     # 빌드한 이미지에 붙일 이름 (= docker build -t boot-flyway-app)
-    image: boot-flyway-app
+    image: vega2krookies6/boot-flyway-app
 
     # 앱에 필요한 값만 골라서 전달
     # - ${...}는 같은 폴더의 .env 파일 값으로 자동 치환됨 (Compose의 변수 치환 기능)

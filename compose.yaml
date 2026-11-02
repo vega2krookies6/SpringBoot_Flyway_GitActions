@@ -61,7 +61,7 @@ services:
     # 이 폴더의 Dockerfile로 이미지를 빌드 (= docker build .)
     build: .
     # 빌드한 이미지에 붙일 이름 (= docker build -t boot-flyway-app)
-    image: boot-flyway-app
+    image: akklda/cboot-flyway-app
 
     # 앱에 필요한 값만 골라서 전달
     # - ${...}는 같은 폴더의 .env 파일 값으로 자동 치환됨 (Compose의 변수 치환 기능)
